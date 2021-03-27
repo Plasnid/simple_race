@@ -3,11 +3,11 @@
  * * Each one has a speed, chance of break down, working status and a position
  */
 let racers =[
-    {name:"walker",speed:0.5, breakdown:0.01, working: true, position:0},
-    {name:"runner",speed:4, breakdown:.05, working: true, position: 0},
-    {name:"tired horse",speed:5, breakdown:0.1, working: true, position: 0},
-    {name:"model-t",speed:4, breakdown:.15, working: true, position: 0},
-    {name:"pogo stick rider",speed:6, breakdown:.2, working: true, position: 0}
+    {name:"Walker",speed:0.5, breakdown:0.01, working: true, position:0},
+    {name:"Runner",speed:4, breakdown:.05, working: true, position: 0},
+    {name:"Tired Horse",speed:5, breakdown:0.01, working: true, position: 0},
+    {name:"Model T",speed:4, breakdown:.05, working: true, position: 0},
+    {name:"Pogo Stick Rider",speed:6, breakdown:.2, working: true, position: 0}
 ]
 
 let raceInterval; // * this interval is what keeps the race running
