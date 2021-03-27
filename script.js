@@ -15,6 +15,7 @@ let finishLine = 100; // * the finish line will be 100% of the ul width
 let winner = ""; // * no winner at the very begginning!
 let raceCountDown = 3; // * a race countdown to get everyone excited!
 let raceStatusDisplay = document.querySelector("h3"); // * declaring our race status display
+let startButton = document.querySelector("button"); // * the button for starting the race
 
 /**
  * * resetRacers
@@ -66,6 +67,7 @@ function displayBroken(racer, arrPos){
  */
 function stopRace(){
     clearInterval(raceInterval);
+    startButton.style.display = "inline-block";
 }
 
 /**
@@ -133,7 +135,7 @@ function raceMove(){
  */
 function startRace(){
     console.log("about to start the race");
-    raceInterval = setInterval(raceMove,100);
+    raceInterval = setInterval(raceMove,150);
 }
 /**
  * * status messages to go into the h3 tag get set here
@@ -167,6 +169,7 @@ function initRaceCountDown(){
     raceCountDown = 3;
     setRaceStatus(raceCountDown)
     setTimeout(changeRaceCount,1000);
+    startButton.style.display = "none";
 }
 
 /**
@@ -174,7 +177,6 @@ function initRaceCountDown(){
  * * When the button is clicked, we start the count down!
  */
 function initScreen(){
-    let startButton = document.querySelector("button");
     setRaceStatus("Get Ready to Race!");
     startButton.addEventListener("click", initRaceCountDown);
 }
