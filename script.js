@@ -7,7 +7,7 @@ let racers =[
     {name:"Runner",speed:4, breakdown:.05, working: true, position: 0},
     {name:"Tired Horse",speed:5, breakdown:0.01, working: true, position: 0},
     {name:"Model T",speed:4, breakdown:.05, working: true, position: 0},
-    {name:"Pogo Stick Rider",speed:6, breakdown:.2, working: true, position: 0}
+    {name:"Pogo Stick Rider",speed:6, breakdown:.07, working: true, position: 0}
 ]
 
 let raceInterval; // * this interval is what keeps the race running
