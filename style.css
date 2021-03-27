@@ -55,3 +55,6 @@ li:nth-child(5){
 .broken{
     transform: scale(0.2);
 }
+button{
+    font-size: 1em;
+}
