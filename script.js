@@ -3,8 +3,8 @@
  * * Each one has a speed, chance of break down, working status and a position
  */
 let racers =[
-    {name:"Walker",speed:0.5, breakdown:0.01, working: true, position:0},
-    {name:"Runner",speed:4, breakdown:.05, working: true, position: 0},
+    {name:"Snail",speed:0.4, breakdown:0.01, working: true, position:0},
+    {name:"Two Legged Dog",speed:2, breakdown:.05, working: true, position: 0},
     {name:"Tired Horse",speed:5, breakdown:0.01, working: true, position: 0},
     {name:"Model T",speed:4, breakdown:.05, working: true, position: 0},
     {name:"Pogo Stick Rider",speed:6, breakdown:.07, working: true, position: 0}
