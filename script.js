@@ -3,11 +3,12 @@
  * * Each one has a speed, chance of break down, working status and a position
  */
 let racers =[
-    {name:"Snail",speed:0.4, breakdown:0.01, working: true, position:0},
-    {name:"Two Legged Dog",speed:2, breakdown:.04, working: true, position: 0},
-    {name:"Tired Horse",speed:5, breakdown:0.08, working: true, position: 0},
-    {name:"Model T",speed:4, breakdown:.05, working: true, position: 0},
-    {name:"Pogo Stick Rider",speed:6, breakdown:.07, working: true, position: 0}
+    {name:"Snail",speed:0.4, breakdown:0.01, working: true, position:0, colour: "red"},
+    {name:"Two Legged Dog",speed:2, breakdown:.04, working: true, position: 0, colour: "green"},
+    {name:"Tired Horse",speed:5, breakdown:0.08, working: true, position: 0, colour: "indigo"},
+    {name:"Model T",speed:4, breakdown:.05, working: true, position: 0, colour: "blue"},
+    {name:"Octopus in a Scaba Suit",speed:5, breakdown:.05, working: true, position: 0, colour: "orange"},
+    {name:"Pogo Stick Rider",speed:6, breakdown:.07, working: true, position: 0, colour: "purple"}
 ]
 
 let raceInterval; // * this interval is what keeps the race running
@@ -179,6 +180,17 @@ function initRaceCountDown(){
 function initScreen(){
     setRaceStatus("Get Ready to Race!");
     startButton.addEventListener("click", initRaceCountDown);
+    let racerSpritesHolder = document.querySelector("#racers");
+    let racerListDisplay = document.querySelector("section");
+    for(let i=0;i<racers.length;i++){
+        let racerSprite = document.createElement("li");
+        racerSpritesHolder.appendChild(racerSprite);
+        let racerNameElement = document.createElement("p");
+        racerNameElement.innerText = racers[i].name;
+        racerListDisplay.appendChild(racerNameElement);
+        racerNameElement.style.color = racers[i].colour;
+        racerSprite.style.backgroundColor = racers[i].colour;
+    }
 }
 
 initScreen();
