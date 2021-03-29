@@ -4,8 +4,8 @@
  */
 let racers =[
     {name:"Snail",speed:0.4, breakdown:0.01, working: true, position:0},
-    {name:"Two Legged Dog",speed:2, breakdown:.05, working: true, position: 0},
-    {name:"Tired Horse",speed:5, breakdown:0.01, working: true, position: 0},
+    {name:"Two Legged Dog",speed:2, breakdown:.04, working: true, position: 0},
+    {name:"Tired Horse",speed:5, breakdown:0.08, working: true, position: 0},
     {name:"Model T",speed:4, breakdown:.05, working: true, position: 0},
     {name:"Pogo Stick Rider",speed:6, breakdown:.07, working: true, position: 0}
 ]
