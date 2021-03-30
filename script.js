@@ -56,7 +56,7 @@ function updatePosition(racer,arrPos){
  * @param {*} arrPos the position in the arrray, which we use to grab the li tag
  * * This function adds a broken class to the on screen display for the contestant
  */
-function displayBroken(racer, arrPos){
+function displayBroken(arrPos){
     let racerToken = document.querySelector(`li:nth-child(${arrPos+1})`);
     racerToken.classList.add("broken");
 }
@@ -115,7 +115,7 @@ function raceMove(){
             }
         }else{
             numBroken +=1;
-            displayBroken(racer, arrPos);
+            displayBroken(arrPos);
             if(numBroken == racers.length){
                 console.log("no one left to race");
                 setRaceStatus("No one left to race!")
