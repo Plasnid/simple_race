@@ -85,10 +85,11 @@ function findDefaultWinner(){
  * @param {*} racer is an object representing the contestant
  * * Checking a racer to see if they are going to break down
  */
-function checkForBreakdown(racer){
+function checkForBreakdown(racer, arrPos){
     let brokenChance = Math.random();
     if(brokenChance < racer.breakdown && racer.working==true){
         racer.working = false;
+        displayBroken(arrPos);
     }
 
 }
@@ -104,7 +105,7 @@ function checkForBreakdown(racer){
 function raceMove(){
     numBroken = 0;
     for(let [arrPos,racer] of racers.entries()){
-        checkForBreakdown(racer);
+        checkForBreakdown(racer, arrPos);
         if(racer.working==true){
             console.log(`${racer.name}: ${racer.position}`);
             updatePosition(racer, arrPos);
@@ -115,7 +116,6 @@ function raceMove(){
             }
         }else{
             numBroken +=1;
-            displayBroken(arrPos);
             if(numBroken == racers.length){
                 console.log("no one left to race");
                 setRaceStatus("No one left to race!")
