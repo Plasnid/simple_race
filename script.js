@@ -29,8 +29,8 @@ function resetRacers(){
         let racerToken = document.querySelector(`li:nth-child(${arrPos+1})`);
         racerToken.style.left = 0;
         racerToken.classList.remove("broken");
-        winner = "";
     }
+    winner = "";
 }
 
 /**
@@ -46,7 +46,6 @@ function updatePosition(racer,arrPos){
         racer.position = finishLine;
     }
     let racerToken = document.querySelector(`li:nth-child(${arrPos+1})`);
-    racerToken.style.animation
     racerToken.style.left = `${racer.position}%`;
     console.log(racerToken);
 }
@@ -145,7 +144,6 @@ function startRace(){
 function setRaceStatus(msg){
     raceStatusDisplay.innerText = msg;
 }
-
 /**
  * * changeRaceCount counts down to 0, 
  * * If the number is higher than 0, it sets a 1000ms pause, then runs itself again
@@ -161,7 +159,6 @@ function changeRaceCount(){
         startRace();
     }
 }
-
 /**
  * * Here we set the countdown to 3, and set up a 1000ms one time count to run changeRaceCount
  */
